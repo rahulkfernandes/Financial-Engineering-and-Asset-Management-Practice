@@ -70,15 +70,14 @@ class BinomialPricer:
                         
         return opt_tree[0, 0], earliest_exercise_period
 
-# --- How clean it looks to use: ---
 if __name__ == '__main__':
-    # Initialize the model with your parameters once
+    # Initialize the model
     model = BinomialPricer(S0=100.0, K=110.0, T=0.25, n_periods=15, r=0.02, sigma=0.30, c=0.01)
 
     call_price, _ = model.price_stock_option('call')
     put_price, put_ex = model.price_stock_option('put')
     fut_price, fut_ex = model.price_futures_option(10)
 
-    print(f"Call Price: {call_price:.2f}")
-    print(f"Put Price: {put_price:.2f} (Earliest Exercise: {put_ex})")
-    print(f"Futures Call Price: {fut_price:.2f} (Earliest Exercise: {fut_ex})")
+    print(f'Call Price: {call_price:.2f}')
+    print(f'Put Price: {put_price:.2f} (Earliest Exercise: {put_ex})')
+    print(f'Futures Call Price: {fut_price:.2f} (Earliest Exercise: {fut_ex})')
