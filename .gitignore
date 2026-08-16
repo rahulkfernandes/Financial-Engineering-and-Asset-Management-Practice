@@ -1,6 +1,12 @@
+# R enviroment files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 *.Rproj
-.DStore
+
+# Temporary Files
+.DS_store
+
+# Data
+2_Optimization_in_Asset_Management/FERM_3_Assignment_1.xlsx
